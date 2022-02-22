@@ -2,19 +2,23 @@
 {% load crispy_forms_filters %}
 {% block content %}
 <div class="container mt-5">
-    <div  class="offset-3 col-md-6 card shadow">
-        <div class="card-header fw-bold text-center">
-            SIGN UP
-        </div>
-        <div class="card-body">
-            <h5 class="card-title text-center">Xush kelibsiz!</h5>
-            <div class="card-text p-3">
-                <form method="post">{% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="col-md-12 text-center">
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
+    <div class="row">
+        <div class="offset-2 col-lg-8 col-sm-8">
+            <div class="card shadow">
+                <div class="card-header fw-bold text-center">
+                    SIGN UP
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">Xush kelibsiz!</h5>
+                    <div class="card-text p-3">
+                        <form method="post">{% csrf_token %}
+                            {{ form | crispy }}
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
